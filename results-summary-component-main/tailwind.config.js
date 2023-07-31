@@ -1,0 +1,80 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      screens: {
+        'tablet': '640px',
+        'laptop': '1024px',
+        'desktop': '1280px'
+      },
+      fontFamily: {
+        sans: ["Hanken Grotesk", ...defaultTheme.fontFamily.sans],
+      },
+      colors: {
+        "light-red": "hsl(0 100% 67%)",
+        "orangey-yellow": "hsl(39 100% 56%)",
+        "green-teal": "hsl(166, 100%, 37%)",
+        "cobalt-blue": "hsl(234, 85%, 45%)",
+        "light-slate-blue": {
+          50: "#f4f2ff",
+          100: "#e9e8ff",
+          200: "#d6d4ff",
+          300: "#bab1ff",
+          400: "#9785ff",
+          500: "#7857ff",
+          600: "#6330f7",
+          700: "#561ee3",
+          800: "#4718bf",
+          900: "#3b169c",
+          950: "#230b6a",
+        },
+        "light-royal-blue": {
+          50: "#f2f5ff",
+          100: "#e7ebff",
+          200: "#d3dbff",
+          300: "#afbbff",
+          400: "#8290ff",
+          500: "#505bff",
+          600: "#2c2dfb",
+          700: "#2e2be9",
+          800: "#1715c2",
+          900: "#16139f",
+          950: "#090b6c",
+        },
+        "violet-blue": {
+          50: "#f3f3ff",
+          100: "#eae9fe",
+          200: "#d8d5ff",
+          300: "#bab4fe",
+          400: "#988afb",
+          500: "#765af8",
+          600: "#6438ef",
+          700: "#5626db",
+          800: "#4e22c9",
+          900: "#3c1b97",
+          950: "#230f66",
+        },
+        "persian-blue": {
+          50: "#f3f6ff",
+          100: "#e9edfe",
+          200: "#d5ddff",
+          300: "#b4c2fe",
+          400: "#8a9afb",
+          500: "#5a68f8",
+          600: "#383cef",
+          700: "#2726db",
+          800: "#2222c9",
+          900: "#1c1b97",
+          950: "#0f1266",
+        },
+        "pale-blue": "hsl(221, 100%, 96%)",
+        "light-lavender": "hsl(241, 100%, 89%)",
+        "dark-gray-blue": "hsl(224, 30%, 27%)",
+      },
+    },
+  },
+  plugins: [],
+};
